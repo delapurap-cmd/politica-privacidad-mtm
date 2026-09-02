@@ -9,36 +9,85 @@
         h1 { color: #2c3e50; border-bottom: 2px solid #eee; padding-bottom: 10px; }
         h3 { color: #2980b9; margin-top: 25px; border-left: 4px solid #2980b9; padding-left: 10px; }
         ul { padding-left: 20px; }
+        .idiomas { font-size: 0.9em; margin-bottom: 20px; }
         .footer { margin-top: 40px; font-size: 0.9em; color: #7f8c8d; border-top: 1px solid #eee; padding-top: 20px; }
+        table { border-collapse: collapse; width: 100%; margin-top: 10px; font-size: 0.95em; }
+        th, td { text-align: left; padding: 8px 10px; border-bottom: 1px solid #eee; vertical-align: top; }
+        th { color: #2c3e50; }
     </style>
 </head>
 <body>
     <h1>Política de Privacidad de More Than Modes</h1>
-    <p><strong>Última actualización:</strong> 10 de febrero de 2026</p>
-    
-    <p>En <strong>More Than Modes</strong>, la privacidad de los músicos es nuestra prioridad. Esta aplicación ha sido diseñada para funcionar principalmente de forma local, minimizando la recopilación de datos al estrictamente necesario para su funcionamiento.</p>
-    
+    <p class="idiomas"><strong>Español</strong> · <a href="en.html">English</a></p>
+    <p><strong>Última actualización:</strong> 2 de septiembre de 2026</p>
+
+    <p>En <strong>More Than Modes</strong>, la privacidad de los músicos es nuestra prioridad. Esta aplicación ha sido diseñada para funcionar principalmente de forma local, minimizando la recopilación de datos al estrictamente necesario para su funcionamiento y su mejora.</p>
+
     <h3>1. Información que recopilamos</h3>
-    <p>La aplicación no requiere registro. Sin embargo, utilizamos el servicio de <strong>Firebase Remote Config</strong> para gestionar información técnica y actualizaciones de la interfaz (como banners de precios o promociones). Este proceso podría recopilar identificadores de dispositivo anónimos para asegurar la entrega correcta del contenido, pero <strong>no</strong> recopila nombres, correos ni datos personales identificables.</p>
-    
-    <h3>2. Permisos y Uso de Hardware</h3>
+    <p>La aplicación no requiere registro ni cuenta de usuario. Utilizamos tres servicios de Google Firebase:</p>
+    <table>
+        <tr>
+            <th>Servicio</th>
+            <th>Qué recoge</th>
+            <th>Para qué</th>
+        </tr>
+        <tr>
+            <td><strong>Google Analytics para Firebase</strong></td>
+            <td>Interacciones agregadas con la aplicación: qué pantallas se abren, cuánto tiempo se permanece en ellas, en cuál se cierra la aplicación y si se muestra la pantalla de compra. Incluye un identificador de instalación e información básica del dispositivo (modelo, versión del sistema, idioma y país aproximado deducido de la dirección IP).</td>
+            <td>Entender qué funciones se usan realmente, para poder mejorarlas y dejar de mantener las que no.</td>
+        </tr>
+        <tr>
+            <td><strong>Firebase Crashlytics</strong></td>
+            <td>Informes de cierre inesperado: el punto del programa donde falló, el modelo de dispositivo, la versión del sistema y un identificador de instalación.</td>
+            <td>Detectar y corregir fallos que de otro modo no llegaríamos a conocer.</td>
+        </tr>
+        <tr>
+            <td><strong>Firebase Remote Config</strong></td>
+            <td>Identificadores de dispositivo anónimos, para entregar la configuración correcta.</td>
+            <td>Gestionar información técnica y elementos de la interfaz, como los avisos de precios o promociones.</td>
+        </tr>
+    </table>
+
+    <h3>2. Lo que NO recopilamos</h3>
     <ul>
-        <li><strong>Micrófono:</strong> Utilizado exclusivamente para las funciones de afinador y grabación de audio en tiempo real.</li>
-        <li><strong>Almacenamiento Local:</strong> El audio grabado se almacena únicamente en la memoria privada de tu dispositivo. No subimos tus grabaciones a la nube.</li>
-        <li><strong>Acceso a Archivos:</strong> Permite importar tus propias pistas de audio para usarlas como backing tracks dentro de la app.</li>
+        <li><strong>El identificador de publicidad</strong> de tu dispositivo. Su recogida está desactivada de forma expresa en la aplicación.</li>
+        <li><strong>Nombres, correos electrónicos ni datos personales identificables.</strong></li>
+        <li><strong>El contenido de lo que creas.</strong> Las letras, canciones, progresiones de acordes, sesiones de estudio y grabaciones permanecen únicamente en tu dispositivo. Nunca se suben a ningún servidor ni se transmiten a nosotros.</li>
+        <li><strong>El audio del micrófono.</strong> Se procesa en el propio dispositivo, en tiempo real, y no se envía a ninguna parte.</li>
     </ul>
 
-    <h3>3. Seguridad y Transferencia de Datos</h3>
-    <p>Cualquier comunicación entre la aplicación y los servicios de Firebase se realiza mediante protocolos encriptados (HTTPS). No compartimos, vendemos ni cedemos ningún tipo de información a terceras empresas con fines publicitarios o de rastreo.</p>
+    <h3>3. Permisos y uso del hardware</h3>
+    <ul>
+        <li><strong>Micrófono:</strong> utilizado exclusivamente para las funciones de afinador y grabación de audio en tiempo real.</li>
+        <li><strong>Almacenamiento local:</strong> el audio grabado se almacena únicamente en la memoria privada de tu dispositivo. No subimos tus grabaciones a la nube.</li>
+        <li><strong>Acceso a archivos:</strong> permite importar tus propias pistas de audio para usarlas como backing tracks dentro de la aplicación.</li>
+    </ul>
 
-    <h3>4. Publicidad</h3>
-    <p>More Than Modes no integra redes de anuncios de terceros (como AdMob). Los banners internos son meramente informativos sobre las funciones de la propia aplicación.</p>
+    <h3>4. Compras dentro de la aplicación</h3>
+    <p>La compra de la versión Pro la gestiona íntegramente Google Play. No recibimos ni almacenamos tus datos de pago en ningún momento: la aplicación solo consulta a Google Play si la compra está activa.</p>
 
-    <h3>5. Derechos del usuario</h3>
-    <p>Dado que no almacenamos datos personales en nuestros servidores, no existe un perfil de usuario que eliminar. Los archivos de audio grabados pueden ser eliminados por el usuario directamente desde la gestión de archivos de su dispositivo.</p>
+    <h3>5. Seguridad y transferencia de datos</h3>
+    <p>Cualquier comunicación entre la aplicación y los servicios de Firebase se realiza mediante protocolos cifrados (HTTPS). Google actúa como proveedor de servicios por cuenta nuestra. <strong>No compartimos, vendemos ni cedemos ningún tipo de información a terceras empresas con fines publicitarios o de rastreo.</strong></p>
+
+    <h3>6. Publicidad</h3>
+    <p>More Than Modes no integra redes de anuncios de terceros (como AdMob). Los avisos internos son meramente informativos sobre las funciones de la propia aplicación.</p>
+
+    <h3>7. Derechos del usuario</h3>
+    <p>No almacenamos perfiles de usuario ni datos personales identificables en nuestros servidores, y el contenido que creas no sale de tu dispositivo.</p>
+    <ul>
+        <li><strong>Eliminación de datos de uso y diagnóstico:</strong> puedes solicitar la eliminación de los datos analíticos y de fallos asociados a tu instalación escribiendo a la dirección de contacto que figura más abajo. Atendemos estas solicitudes en un plazo máximo de 30 días.</li>
+        <li><strong>Desinstalar la aplicación</strong> detiene por completo cualquier recogida de datos.</li>
+        <li><strong>Tus archivos:</strong> las grabaciones y los proyectos guardados pueden eliminarse directamente desde la propia aplicación o desde el gestor de archivos de tu dispositivo.</li>
+    </ul>
+
+    <h3>8. Menores</h3>
+    <p>More Than Modes no está dirigida a menores de 13 años y no recopila conscientemente información de ellos.</p>
+
+    <h3>9. Cambios en esta política</h3>
+    <p>Si en el futuro cambia lo que la aplicación recopila, actualizaremos esta página y la fecha que figura al principio antes de publicar la versión correspondiente.</p>
 
     <div class="footer">
-        <p>Para soporte o dudas sobre privacidad: <strong>kami.pegue@gmail.com</strong></p>
+        <p>Para soporte o dudas sobre privacidad: <strong>contact@morethanmodes.com</strong></p>
     </div>
 </body>
 </html>
