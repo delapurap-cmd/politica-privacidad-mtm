@@ -9,9 +9,10 @@ import androidx.appcompat.app.AppCompatActivity;
 import com.google.android.material.button.MaterialButton;
 import com.google.android.material.card.MaterialCardView;
 import com.google.android.material.slider.Slider;
-import com.yausername.youtubedl_android.FFmpeg;
+import com.yausername.ffmpeg.FFmpeg;
 import com.yausername.youtubedl_android.YoutubeDL;
 import com.yausername.youtubedl_android.YoutubeDLRequest;
+import kotlin.Unit;
 import java.io.File;
 import java.util.*;
 import java.util.concurrent.ExecutorService;
@@ -150,8 +151,10 @@ public class MainActivity extends AppCompatActivity {
                         ",aresample=44100,atempo=" + (1.0 / factor));
                 }
                 req.addOption("-o", base + ".%(ext)s");
-                YoutubeDL.getInstance().execute(req, (p, eta) ->
-                    runOnUiThread(() -> progress.setProgress(Math.max(0, Math.min(100, (int)p)))), id);
+                YoutubeDL.getInstance().execute(req, id, (p, eta, line) -> {
+                    runOnUiThread(() -> progress.setProgress(Math.max(0, Math.min(100, (int)(float)p))));
+                    return Unit.INSTANCE;
+                });
                 completed++;
             } catch (Exception e) { failed++; }
         }
