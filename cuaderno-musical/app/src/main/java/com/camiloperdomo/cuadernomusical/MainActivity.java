@@ -89,7 +89,7 @@ public class MainActivity extends AppCompatActivity {
                 YoutubeDL.getInstance().init(getApplication());
                 FFmpeg.getInstance().init(getApplication());
                 try {
-                    YoutubeDL.getInstance().updateYoutubeDL(getApplicationContext(), YoutubeDL.UpdateChannel.STABLE);
+                    YoutubeDL.getInstance().updateYoutubeDL(getApplicationContext(), YoutubeDL.UpdateChannel._STABLE);
                 } catch (Exception ignored) {
                     // El motor incluido sigue disponible si no hay actualización o no hay red.
                 }
