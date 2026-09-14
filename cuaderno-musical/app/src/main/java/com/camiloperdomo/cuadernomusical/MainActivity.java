@@ -364,7 +364,7 @@ public class MainActivity extends AppCompatActivity {
         float max = .001f;
         for (float p : peaks) max = Math.max(max, p);
         JSONArray result = new JSONArray();
-        for (float p : peaks) result.put(Math.max(.04, p / max));
+        for (float p : peaks) result.put(Float.valueOf(Math.max(.04f, p / max)));
         return result;
     }
 
